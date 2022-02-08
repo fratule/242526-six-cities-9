@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
-* Студент: [Никита Рыжов](https://up.htmlacademy.ru/react/9/user/242526).
-* Наставник: `Неизвестно`.
+* Студент: [Никита Рыжов](https://htmlacademy.ru/profile/id242526).
+* Наставник: [Богдан Волик](https://htmlacademy.ru/profile/id997699).
 
 ---
 
