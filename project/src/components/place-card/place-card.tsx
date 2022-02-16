@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../const/enums';
 import { Place } from '../../types/place';
 import { getPlaceRatingPercent } from '../../utils/utils';
 
 function PlaceCard(props: Place) {
+  const offerLink = AppRoute.Offer.replace(':id', `${props.id}`);
+
   return (
     <article className="cities__place-card place-card">
       {props.isPremium && (
@@ -11,7 +15,7 @@ function PlaceCard(props: Place) {
       )}
 
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+        <Link to={offerLink}>
           <img
             className="place-card__image"
             src={props.previewImage}
@@ -19,7 +23,7 @@ function PlaceCard(props: Place) {
             height="200"
             alt={props.title}
           />
-        </a>
+        </Link>
       </div>
 
       <div className="place-card__info">
@@ -52,7 +56,9 @@ function PlaceCard(props: Place) {
         </div>
 
         <h2 className="place-card__name">
-          <a href="#">{props.title}</a>
+          <Link to={offerLink}>
+            {props.title}
+          </Link>
         </h2>
         <p className="place-card__type">{props.type}</p>
       </div>
